@@ -1,4 +1,4 @@
-TARGET=hyourowgan
+TARGET=hrg_m4telemet
 DFP_VER=1.35.0
 
 ifeq ($(DFP_VER),)
@@ -24,7 +24,7 @@ LIBS    =
 
 #Include dir, Source files.
 INCLUDE = -IRTE -IRTE/Device/TZ1001MBG
-SOURCES = src/main.c src/ble.c src/pwm_out.c
+SOURCES = src/main.c src/ble.c src/config.c
 include *.mk
 
 #Objects

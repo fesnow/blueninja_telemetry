@@ -59,7 +59,7 @@ bool TZ01_console_init(void)
 {
     /* PMU */
     Driver_PMU.SelectClockSource(PMU_CSM_UART, PMU_CLOCK_SOURCE_OSC12M);
-    Driver_PMU.SetPrescaler(PMU_CD_UART, 1);
+    Driver_PMU.SetPrescaler(PMU_CD_UART, 4);
     /* UART */
     tz10xx_drv_uart->Initialize(0, 0);
     tz10xx_drv_uart->Configure(TZ01_CONSOLE_BAUD, 8, ARM_UART_PARITY_NONE, ARM_UART_STOP_BITS_1, ARM_UART_FLOW_CONTROL_NONE);

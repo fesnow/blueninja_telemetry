@@ -3,14 +3,14 @@
 
 #include <stdint.h>
 
-#define DEFAULT_SHORTENED_LOCAL_NAME    "HyourowGan"
+#define DEFAULT_NAME_PREFIX "BNTLM_"
 
-#define CONFIG_MAGIC        "hgGC"
+#define CONFIG_MAGIC        "hrGC"
 #define CONFIG_BASE_ADDR_1  (0x000FE000)
 #define CONFIG_BASE_ADDR_2  (0x000FF000)
 
 typedef struct {
-    char    shortened_local_name[20];   //BLE advertise `Shorten local name'
+    char    shortened_local_name[24];   //BLE advertise `Shorten local name'
 }   HYRWGN_CONFIG;
 
 #endif
