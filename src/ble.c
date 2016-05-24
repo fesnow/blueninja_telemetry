@@ -34,8 +34,6 @@ limitations under the License.
 #include "TZ01_system.h"
 #include "TZ01_console.h"
 #include "MPU-9250.h"
-#include "BMP280.h"
-#include "pwm_out.h"
 #include "config.h"
 
 extern HYRWGN_CONFIG gConfig;

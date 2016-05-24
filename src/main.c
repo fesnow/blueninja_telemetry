@@ -40,7 +40,6 @@ limitations under the License.
 #include "utils.h"
 
 #include "ble.h"
-#include "pwm_out.h"
 
 #include "config.h"
 
@@ -119,10 +118,6 @@ static bool init(void)
     if (MPU9250_drv_init(&Driver_SPI3)) {
         MPU9250_drv_start_maesure(MPU9250_BIT_ACCEL_FS_SEL_16G, MPU9250_BIT_GYRO_FS_SEL_2000DPS, MPU9250_BIT_DLPF_CFG_20HZ, MPU9250_BIT_A_DLPFCFG_20HZ);
     } else {
-        return false;
-    }
-    //気圧センサー
-    if (BMP280_drv_init(&Driver_I2C1) == false) {
         return false;
     }
     

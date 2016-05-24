@@ -1,4 +1,4 @@
-TARGET=hrg_m4telemet
+TARGET=blueninja_telemetry
 DFP_VER=1.35.0
 
 ifeq ($(DFP_VER),)
