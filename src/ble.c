@@ -474,11 +474,9 @@ static void ble_online_motion_average(void)
 static void ble_online_motion_notify(void)
 {
     int ret;
-    int val_len;
-    
-    val_len = 18;
+
     //åvë™åãâ Ç™ï€éùÇÁÇÍÇƒÇÈ
-    ret = BLELib_notifyValue(GATT_UID_MOTION, motion_val, val_len);
+    ret = BLELib_notifyValue(GATT_UID_MOTION, motion_val, sizeof(motion_val));
     if (ret != BLELIB_OK) {
         sprintf(msg, "GATT_UID_MOTION: Notify failed. ret=%d\r\n", ret);
         TZ01_console_puts(msg);
